@@ -53,8 +53,9 @@ myObject = {
             var doubled = value * 2;
             console.log('Doubled =', doubled);
             return doubled;
-        },
-        function () { return this.value; }
+        }, {
+            getter: function () { return this.value; }
+        }
     )
 };
 

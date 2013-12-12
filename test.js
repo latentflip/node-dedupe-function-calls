@@ -41,8 +41,11 @@ var makeGetter = function (vals) {
 spy.empty();
 var get = makeGetter([1,1,2,2,1,2]);
 var logWithGetter = dedupe(function (value) {
-    spy.log(value);
-}, get);
+        spy.log(value);
+    }, {
+        getter: get
+    }
+);
 
 logWithGetter();
 logWithGetter();

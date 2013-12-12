@@ -82,7 +82,7 @@ Can be used in two ways.
         myObject.double(); //logs 4, returns 4
         myObject.double(); //no log, returns 4
 
-        //But dedupe can actually take a getter function, so you can do:
+        //But dedupe can actually take a getter function in it's optional arguments, so you can do:
         // (note that both the getter and the function will be called in the context of your object)
 
         var myObject = {
@@ -92,8 +92,9 @@ Can be used in two ways.
                     var doubled = value * 2;
                     console.log('Doubled =', doubled);
                     return doubled;
-                },
-                function () { return this.value; }
+                }, {
+                    getter: function () { return this.value; }
+                }
             )
         };
 

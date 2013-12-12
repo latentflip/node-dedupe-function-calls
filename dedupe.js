@@ -1,9 +1,11 @@
 var _ = require('underscore');
 var dedupe;
 
-module.exports = dedupe = function(fn, getter) {
+module.exports = dedupe = function(fn, options) {
+    options = options || {};
     var lastCall;
     var lastResult;
+    var getter = options.getter;
 
     return function () {
         var args = arguments;
