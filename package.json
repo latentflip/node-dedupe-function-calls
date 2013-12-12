@@ -1,0 +1,15 @@
+{
+  "name": "dedupe-function-calls",
+  "version": "0.0.0",
+  "description": "Deduplicate sequential function calls with the same arguments",
+  "main": "dedupe.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "reposotiory": "git://github.com/latentflip/node-dedupe-function-calls",
+  "author": "Philip Roberts",
+  "license": "MIT",
+  "dependencies": {
+    "underscore": "~1.5.2"
+  }
+}
