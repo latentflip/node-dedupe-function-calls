@@ -8,6 +8,8 @@ Prevents a function being called multiple times with the same arguments + memoiz
 npm install dedupe-function-calls
 ```
 
+Works in node or the browser with browserify. Depends on underscore.
+
 ## Usage
 
 Can be used in two ways.
